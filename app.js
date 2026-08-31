@@ -1,6 +1,7 @@
 // Banner Component
 // Updated Header Component
 // Ultra-Premium Glassmorphic Header Component
+
 const Header = () => (
     <header className="custom-header">
         <div className="header-container">
@@ -22,11 +23,22 @@ const Header = () => (
 
             {/* Right Side: Glassmorphic Contact Buttons */}
             <div className="header-right">
-                <a href="tel:03421287734" className="header-contact-pill">
+                {/* WhatsApp Direct Link */}
+                <a 
+                    href="https://wa.me/923421287734" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="header-contact-pill"
+                >
                     <span className="pill-icon">📞</span>
                     <span className="pill-text">0342-1287734</span>
                 </a>
-                <a href="mailto:Parashamza955@gmail.com" className="header-contact-pill email-pill">
+
+                {/* Email Link */}
+                <a 
+                    href="mailto:Parashamza955@gmail.com" 
+                    className="header-contact-pill email-pill"
+                >
                     <span className="pill-icon">✉️</span>
                     <span className="pill-text">Parashamza955@gmail.com</span>
                 </a>
