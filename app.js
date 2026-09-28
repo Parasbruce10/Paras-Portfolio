@@ -130,35 +130,64 @@ const TechTicker = () => {
 const Content = () => (
     <main className="main-content">
         <div className="profile-section">
-            <div className="profile-avatar-wrapper">
-                <img 
-                    src="hero.jpeg" 
-                    alt="Paras Profile" 
-                    className="profile-avatar" 
-                />
+       <main className="premium-hero-container">
+    {/* Ambient Glowing Background Orbs */}
+    <div className="ambient-glow orb-1"></div>
+    <div className="ambient-glow orb-2"></div>
+
+    <div className="glass-hero-card">
+        {/* Shimmer Border Light */}
+        <div className="shimmer-border"></div>
+
+        {/* 3D Flick / Flip Avatar Section */}
+        <div className="profile-avatar-wrapper">
+            <div className="avatar-glow-ring"></div>
+            <div className="avatar-flip-card">
+                <div className="avatar-front">
+                    <img 
+                        src="hero.jpeg" 
+                        alt="Paras Profile" 
+                        className="profile-avatar" 
+                    />
+                </div>
+                <div className="avatar-back">
+                    <span>✨ Open To Work</span>
+                </div>
             </div>
-            
-            <h1 className="profile-title">
-                <TypewriterText />
-            </h1>
-            
-            <p className="profile-subtitle">
+        </div>
+        
+        {/* Main Title */}
+        <h1 className="profile-title">
+            <TypewriterText />
+        </h1>
+        
+        {/* Premium Status Badge */}
+        <div className="profile-subtitle-badge">
+            <span className="live-pulse-dot"></span>
+            <span className="subtitle-text">
                 Software Engineer | Full-Stack Developer & Vibe Coder
-            </p>
-            
-            <p className="profile-bio">
-                Passionate about building seamless web experiences, solving complex technical problems, and turning creative ideas into functional digital solutions with clean, modern code.
-            </p>
-            
-            <div className="skills-container">
-                <span className="skill-chip">HTML5</span>
-                <span className="skill-chip">CSS3</span>
-                <span className="skill-chip">JavaScript</span>
-                <span className="skill-chip">React</span>
-                <span className="skill-chip">Python</span>
-                <span className="skill-chip">WordPress</span>
-                <span className="skill-chip">MS Office</span>
-            </div>
+            </span>
+        </div>
+        
+        {/* Bio Text */}
+        <p className="profile-bio">
+            Passionate about building seamless web experiences, solving complex technical problems, and turning creative ideas into functional digital solutions with clean, modern code.
+        </p>
+        
+        {/* Interactive Glassmorphic Skill Chips */}
+        <div className="skills-container">
+            <span className="skill-chip"><i className="chip-icon">⚡</i> HTML5</span>
+            <span className="skill-chip"><i className="chip-icon">🎨</i> CSS3</span>
+            <span className="skill-chip"><i className="chip-icon">🌊</i> Tailwind CSS</span>
+            <span className="skill-chip"><i className="chip-icon">📜</i> JavaScript</span>
+            <span className="skill-chip"><i className="chip-icon">⚛️</i> React</span>
+            <span className="skill-chip"><i className="chip-icon">🐍</i> Python</span>
+            <span className="skill-chip"><i className="chip-icon">🌐</i> WordPress</span>
+            <span className="skill-chip"><i className="chip-icon">🛍️</i> Shopify</span>
+            <span className="skill-chip"><i className="chip-icon">💼</i> MS Office</span>
+        </div>
+    </div>
+</main>
 
             {/* Glowing Running Ticker/Patti */}
             <TechTicker />
@@ -444,6 +473,13 @@ const Content = () => (
 
         <div className="animated-skill-card">
             <div className="skill-icon-box">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" />
+            </div>
+            <span>Tailwind CSS</span>
+        </div>
+
+        <div className="animated-skill-card">
+            <div className="skill-icon-box">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
             </div>
             <span>JavaScript</span>
@@ -468,6 +504,13 @@ const Content = () => (
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" />
             </div>
             <span>WordPress</span>
+        </div>
+
+        <div className="animated-skill-card">
+            <div className="skill-icon-box">
+                <img src="https://img.icons8.com/color/48/shopify.png" alt="Shopify" />
+            </div>
+            <span>Shopify</span>
         </div>
 
         <div className="animated-skill-card">

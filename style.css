@@ -253,23 +253,23 @@ body {
     line-height: 1.3;
 }
 
+/* Typewriter Text Writing Style */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap');
+
 .typewriter-text {
-    font-family: 'Sansita Swashed', system-ui;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    background: linear-gradient(135deg, #00d2ff 0%, #0072ff 50%, #00fff0 100%);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 2.75rem;
+    background: linear-gradient(90deg, #a855f7, #ec4899, #f97316);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 12px rgba(0, 210, 255, 0.4));
-    display: inline-block;
+    filter: drop-shadow(0 0 20px rgba(236, 72, 153, 0.4));
 }
 
 .typewriter-cursor {
-    color: #00d2ff;
-    font-weight: 300;
-    margin-left: 2px;
-    animation: blinkCursor 0.8s infinite;
+    color: #f97316;
+    font-weight: 400;
+    animation: blinkCursor 0.7s infinite;
 }
 
 @keyframes blinkCursor {
@@ -1054,5 +1054,272 @@ body {
     
     .footer-bio {
         font-size: 0.78rem;
+    }
+}
+/* Container & Ambient Glows */
+.premium-hero-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    min-height: 85vh;
+    overflow: hidden;
+}
+
+.ambient-glow {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.5;
+    pointer-events: none;
+    animation: floatGlow 8s ease-in-out infinite alternate;
+}
+
+.orb-1 {
+    top: 5%;
+    left: 15%;
+    background: radial-gradient(circle, #06b6d4, #3b82f6);
+}
+
+.orb-2 {
+    bottom: 5%;
+    right: 15%;
+    background: radial-gradient(circle, #a855f7, #ec4899);
+    animation-delay: -4s;
+}
+
+/* Glassmorphism Card */
+.glass-hero-card {
+    position: relative;
+    width: 100%;
+    max-width: 780px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3.5rem 2rem;
+    border-radius: 32px;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.5s ease;
+}
+
+.glass-hero-card:hover {
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 35px 70px -10px rgba(59, 130, 246, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* 3D Photo Flick / Flip Effect */
+.profile-avatar-wrapper {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 2rem;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.avatar-glow-ring {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #06b6d4, #3b82f6, #a855f7, #ec4899);
+    filter: blur(12px);
+    opacity: 0.75;
+    transition: opacity 0.5s ease, filter 0.5s ease;
+    animation: rotateGlow 6s linear infinite;
+}
+
+.profile-avatar-wrapper:hover .avatar-glow-ring {
+    opacity: 1;
+    filter: blur(20px);
+}
+
+.avatar-flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.profile-avatar-wrapper:hover .avatar-flip-card {
+    transform: rotateY(180deg) scale(1.08);
+}
+
+.avatar-front, .avatar-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.avatar-front .profile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-back {
+    background: linear-gradient(135deg, #0f172a, #1e1b4b);
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #38bdf8;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+/* Title & Subtitle Badge */
+.profile-title {
+    font-size: 2.75rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.profile-subtitle-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px;
+    border-radius: 9999px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: inset 0 0 12px rgba(56, 189, 248, 0.15);
+    margin-bottom: 1.5rem;
+}
+
+.live-pulse-dot {
+    width: 9px;
+    height: 9px;
+    background-color: #38bdf8;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #38bdf8;
+    animation: pulseGlow 1.8s infinite;
+}
+
+.subtitle-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Bio */
+.profile-bio {
+    color: #cbd5e1;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 620px;
+    margin-bottom: 2.25rem;
+    font-weight: 300;
+}
+
+/* Skill Chips */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.skill-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    border-radius: 16px;
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f1f5f9;
+    font-size: 0.88rem;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.chip-icon {
+    font-style: normal;
+}
+
+.skill-chip:hover {
+    transform: translateY(-5px) scale(1.06);
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(168, 85, 247, 0.25));
+    border-color: rgba(56, 189, 248, 0.6);
+    color: #ffffff;
+    box-shadow: 0 10px 25px -5px rgba(6, 182, 212, 0.4),
+                0 0 15px rgba(168, 85, 247, 0.3);
+}
+
+/* Keyframe Animations */
+@keyframes rotateGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.3); }
+}
+
+@keyframes floatGlow {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, -20px) scale(1.15); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .glass-hero-card {
+        padding: 2.5rem 1.25rem;
+        border-radius: 24px;
+    }
+
+    .profile-title {
+        font-size: 2rem;
+    }
+
+    .profile-subtitle-badge {
+        padding: 6px 14px;
+    }
+
+    .subtitle-text {
+        font-size: 0.8rem;
+    }
+
+    .profile-bio {
+        font-size: 0.92rem;
+    }
+
+    .profile-avatar-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .skill-chip {
+        padding: 8px 14px;
+        font-size: 0.8rem;
     }
 }
