@@ -57,9 +57,9 @@ const StarIcon = () => (
 // Typewriter Component for Dynamic Heading
 const TypewriterText = () => {
     const texts = [
-        "Hi! My Name Is Paras",
-        "I am a Full-Stack Developer",
-        "And I am a Vibe Coder"
+        "Hi My Name Is Paras",
+        "I Am A Full-Stack Developer",
+        "And I Am A Vibe Coder"
     ];
     
     const [textIndex, setTextIndex] = React.useState(0);
@@ -151,7 +151,7 @@ const Content = () => (
                     />
                 </div>
                 <div className="avatar-back">
-                    <span>✨ Open To Work</span>
+                    <span>Open To Work</span>
                 </div>
             </div>
         </div>
@@ -224,7 +224,7 @@ const Content = () => (
                     {/* Card 3 */}
                     <div className="education-card">
                         <div className="edu-logo-wrapper">
-                            <img src="school.jpg" alt="School Logo" className="edu-logo" onError={(e) => { e.target.src = "mathamatics.jpeg"; }} />
+                            <img src="school.jpg" alt="School Logo" className="edu-logo" onError={(e) => { e.target.src = "matha.jpeg"; }} />
                         </div>
                         <div className="edu-details">
                             <h3 className="edu-university">Mathamatics City Grammer School</h3>
@@ -247,7 +247,7 @@ const Content = () => (
                                 src="company1.jpg"
                                 alt="Company Logo"
                                 className="edu-logo"
-                                onError={(e) => { e.target.src = "logo.jpeg"; }}
+                                onError={(e) => { e.target.src = "header.jpeg"; }}
                             />
                         </div>
                         <div className="edu-details">
@@ -305,6 +305,40 @@ const Content = () => (
                                 <span className="edu-badge">JavaScript & React</span>
                                 <a
                                     href="https://www.resumepro.it.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="visit-btn"
+                                >
+                                    Visit Website ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+{/* Project Card 1.2 */}
+                    <div className="education-card">
+                        <div className="edu-logo-wrapper">
+                            <img
+                                src="project1.jpeg"
+                                alt="Resume Pro Logo"
+                                className="edu-logo"
+                                onError={(e) => { e.target.src = "electro.png"; }}
+                            />
+                        </div>
+                        <div className="edu-details">
+                            <h3 className="edu-university">Electro Mark – E-commerce</h3>
+                            <a
+                                href="https://electromark.bookapexcode.store/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="edu-degree project-link"
+                            >
+                                https://electromark.bookapexcode.store/
+                            </a>
+                            <div className="card-bottom-row">
+                                <span className="edu-badge">JavaScript & React</span>
+                                <a
+                                    href="https://electromark.bookapexcode.store/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="visit-btn"
